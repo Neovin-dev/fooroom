@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="shortcut icon" href="img/image1.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="form-container-Mform">
+        <h3>Registration Form</h3>
+
+        <form id="Mform">
+
+            <div class="row-view">
+
+                <div class="ele-container">
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="fname" placeholder="Enter your first name" required>
+                </div>
+                <!-- last-name -->
+                <div class="ele-container">
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lname" placeholder="Enter your last name" required>
+                </div>
+            </div>
+
+            <div class="row-view">
+                <!-- date-of-birth -->
+                <div class="ele-container">
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+                <!-- Email -->
+                <div class="ele-container">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your Email Address" required>
+                </div>
+            </div>
+
+            <div class="row-view">
+                <!-- gender radio -->
+                <div class="gender-container">
+                    <h4>Gender</h4>
+                        <div class="gender-row-category">
+                            <label class="gender-category">Male
+                                <input type="radio" name="gender" id="gender-cat-1" required>
+                                <span class="custom-radio"></span>
+                            </label>
+                            <label class="gender-category">Female
+                                <input type="radio" name="gender" id="gender-cat-2">
+                                <span class="custom-radio"></span>
+                            </label>
+                            <label class="gender-category">Others
+                                <input type="radio" name="gender" id="gender-cat-3">
+                                <span class="custom-radio"></span>
+                            </label>
+                        </div>
+                </div>
+
+                <!-- Tele No -->
+                <div class="ele-container">
+                    <label for="telenum">Phone number</label>
+                    <input type="tel" id="telenum" name="telenum" placeholder="Enter your Phone Number" required>
+                </div>
+            </div>
+
+            <div class="row-view">
+                <div class="subject-container">
+                    <h4>Subjects</h4>
+                    <div class="subject-row-category">
+                        <div class="categories subject-category">
+                            <label for="maths">Maths
+                                <input type="checkbox" name="maths" id="maths">
+                                <span class="custom-checkbox"></span>
+                            </label>
+                        </div>
+                        <div class="categories subject-category">
+                            <label for="english">English
+                                <input type="checkbox" name="english" id="english">
+                                <span class="custom-checkbox"></span>
+                            </label>
+                        </div>
+                        <div class="categories subject-category">
+                            <label for="french">French
+                                <input type="checkbox" name="french" id="french">
+                                <span class="custom-checkbox"></span>
+                            </label>
+                        </div>
+                        <div class="categories subject-category">
+                            <label for="history">History
+                                <input type="checkbox" name="history" id="history">
+                                <span class="custom-checkbox"></span>
+                        </div>
+                    </div>
+                </div>
+            
+            <!-- exam -->
+                <div class="ele-container">
+                    <label for="exam">Exam Center</label>
+                    <select name="exam" id="exam">
+                        <option value="">-- Choose a exam center --</option>
+                        <option value="Noida">Noida</option>
+                        <option value="Delhi Ncr">Delhi NCR</option>
+                        <option value="Mumbai">Mumbai</option>
+                    </select>
+                </div>
+            </div>
+
+            
+                <div id="button-container">
+                    <button class="button-register" type="submit">
+                        <img src="img/arrow_forward_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+                    </button>
+                </div>
+            <!-- <button class="button-reset" type="submit">
+                Rest
+            </button> -->
+        </form>
+    </div>
+
+
+
+    <div class="table-wrapper">
+
+            <div id="filter-containers" class="filter-wrapper form-container deactive-style">
+            <h3 style="text-align: center; ">Filter Menu</h4>
+
+                <div class="subject-filter-container">
+                    <div class="row-filter-align">
+                        <h4>Gender</h4>
+                        <div class="subject-row-category">
+                            <div class="categories subject-category">
+                                <label for="gender-male">Male
+                                    <input type="checkbox" name="gender" id="gender-male" value="Male">
+                                    <span class="custom-checkbox"></span>
+                                </label>
+                            </div>
+                            <div class="categories subject-category">
+                                <label for="gender-female">Female
+                                    <input type="checkbox" name="gender" id="gender-female" value="Female">
+                                    <span class="custom-checkbox"></span>
+                                </label>
+                            </div>
+                            <div class="categories subject-category">
+                                <label for="gender-others">Others
+                                    <input type="checkbox" name="gender" id="gender-others" value="Others">
+                                    <span class="custom-checkbox"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subject-filter-container">
+                    <div class="row-filter-align">
+                        <h4>Subjects</h4>
+                        <div class="subject-row-category">
+                            <div class="categories subject-category">
+                                <label for="subject-maths">Maths
+                                    <input type="checkbox" name="subject" id="subject-maths" value="Maths">
+                                    <span class="custom-checkbox"></span>
+                                </label>
+                            </div>
+                            <div class="categories subject-category">
+                                <label for="subject-english">English
+                                    <input type="checkbox" name="subject" id="subject-english" value="English">
+                                    <span class="custom-checkbox"></span>
+                                </label>
+                            </div>
+                            <div class="categories subject-category">
+                                <label for="subject-french">French
+                                    <input type="checkbox" name="subject" id="subject-french" value="French">
+                                    <span class="custom-checkbox"></span>
+                                </label>
+                            </div>
+                            <div class="categories subject-category">
+                                <label for="subject-history">History
+                                    <input type="checkbox" name="subject" id="subject-history" value="History">
+                                    <span class="custom-checkbox"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subject-filter-container">
+                    <div class="row-filter-align">
+                        <h4>Exam Center</h4>
+                        <div class="subject-row-category">
+                            <div class="categories subject-category">
+                                <label for="center-noida">Noida
+                                    <input type="checkbox" name="center" id="center-noida" value="Noida">
+                                    <span class="custom-checkbox"></span>
+                                </label>
+                            </div>
+                            <div class="categories subject-category">
+                                <label for="center-delhi">Delhi NCR
+                                    <input type="checkbox" name="center" id="center-delhi" value="Delhi NCR">
+                                    <span class="custom-checkbox"></span>
+                                </label>
+                            </div>
+                            <div class="categories subject-category">
+                                <label for="center-mumbai">Mumbai
+                                    <input type="checkbox" name="center" id="center-mumbai" value="Mumbai">
+                                    <span class="custom-checkbox"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 20px;">
+                    <button id="apply-filter-button" class="button-register" type="button" style="margin-right: 10px; min-width: 60px;">Apply</button>
+                    <button id="clear-filter-button" class="button-register" type="button" style="min-width: 60px;">Clear</button>
+                </div>
+
+        </div>
+
+        
+        <div class="form-container table deactive-style" id="tableItself">
+            <div class="form-header">
+                    <div class="form-sort-filter-bar">
+                        <div class="form-heading">
+                            <h3>Registration Data</h3>
+                        </div>
+                        <div id="sort-filter-visible">
+                            <div id="sort-bar" class="deactive-style">
+                                <div class="dropdown" id="sort-select">
+                                    <input type="checkbox" id="my-dropdown" value="">
+                                    <label for="my-dropdown" data-toggle="dropdown"> Sort By </label>
+                                    <ul id="sort-menu">
+                                        <li><a href="#" data-sort="A-Z">Name (A-Z) </a></li>
+                                        <li><a href="#" data-sort="Z-A">Name (Z-A) </a></li>
+                                        <li><a href="#" data-sort="O-Y">Age (Desc) </a></li>
+                                        <li><a href="#" data-sort="Y-O">Age (ASC) </a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div id="filter-bar" class="deactive-style">
+                                <button id="filter-button" class="button-register" type="submit">
+                                    <img src="img/filter_alt_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+            <div class="table-container-div">
+                <table id="table-container">
+                    <thead>
+                        <tr>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>D.O.B</th>
+                            <th>Email</th>
+                            <th>Mobile no.</th>
+                            <th>Exam Center</th>
+                            <th>Gender</th>
+                            <th>Subjects</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                        <!-- injection here -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- <div id="button-container" style="display: none;">
+                <button class="button-register" type="submit">
+                    <img src="img/edit_24dp_0000F5_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+                </button>
+                <button id="delete-button" class="button-register" type="submit">
+                    <img src="img/delete_24dp_EA3323_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+                </button>
+            </div> -->
+        </div>
+    
+
+
+    <button id="refreshButton" alt="reset">
+        <img src="img/refresh_24dp_0000F5_FILL0_wght400_GRAD0_opsz24.svg">
+    </button>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
