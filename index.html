@@ -216,7 +216,7 @@
                     </div>
                 </div>
 
-                <div style="text-align: center; margin-top: 20px;">
+                <div class="apply-clear-bar" style="text-align: center; margin-top: 20px;">
                     <button id="apply-filter-button" class="button-register" type="button" style="margin-right: 10px; min-width: 60px;">Apply</button>
                     <button id="clear-filter-button" class="button-register" type="button" style="min-width: 60px;">Clear</button>
                 </div>
@@ -228,7 +228,7 @@
             <div class="form-header">
                     <div class="form-sort-filter-bar">
                         <div class="form-heading">
-                            <h3 style="font-weight: 900; font-style: italic; font-size: 32px; padding-left: 45px;font-family: Bitcount Single Ink, system-ui;">Registration <span style="color: whitesmoke; font-weight: 500; font-size: 22px;font-family: Poppins, system-ui;">Data</span></h3>
+                            <h3 style="font-weight: 900; font-style: italic; font-size: 32px; padding-left: 20px;font-family: Bitcount Single Ink, system-ui;">Registration <span style="color: whitesmoke; font-weight: 500; font-size: 22px;font-family: Poppins, system-ui;">Data</span></h3>
                         </div>
                         <div id="sort-filter-visible">
                             <div id="sort-bar" class="deactive-style">
@@ -289,6 +289,130 @@
     <button id="refreshButton" alt="reset">
         <img src="img/refresh_24dp_0000F5_FILL0_wght400_GRAD0_opsz24.svg">
     </button>
+
+        <div id="overlay-backdrop" class="inactive"></div>
+
+        <div id="mobile-filter-overlay" class="inactive">
+        <div class="mobile-sort-header">
+            <span>Filters</span>
+            <button id="close-filter-btn" class="close-btn">✕</button>
+        </div>
+
+        <div class="filter-categories-mobile">
+
+            <div class="filter-categories">
+                <div id="genderListnerMobile" class="filter-category-wrapper">
+                    <div class="filter-category-header">
+                        <span class="filter-heading-category">Gender</span>
+                        <span>
+                            <img id="rotating-icon-gender" src="img/arrow_drop_up_24dp_222222_FILL0_wght400_GRAD0_opsz24.svg" alt="toggle section">
+                        </span>
+                    </div>
+                </div>
+                <div id="scrollable-side-bar-gender-mobile" class="filter-categories scrollable-container inactive">
+                    <div class="subject-row-category">
+                        <div class="categories subject-category">
+                            <label for="gender-male">Male
+                                <input type="checkbox" name="gender" id="gender-male" value="Male">
+                                <span class="custom-checkbox"></span>
+                            </label>
+                        </div>
+                        <div class="categories subject-category">
+                            <label for="gender-female">Female
+                                <input type="checkbox" name="gender" id="gender-female" value="Female">
+                                <span class="custom-checkbox"></span>
+                            </label>
+                        </div>
+                        <div class="categories subject-category">
+                            <label for="gender-others">Others
+                                <input type="checkbox" name="gender" id="gender-others" value="Others">
+                                <span class="custom-checkbox"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="filter-categories">
+                <div id="subjectsListnerMobile" class="filter-category-wrapper">
+                    <div class="filter-category-header">
+                        <span class="filter-heading-category">Subjects</span>
+                        <span>
+                            <img id="rotating-icon-subjects" src="img/arrow_drop_up_24dp_222222_FILL0_wght400_GRAD0_opsz24.svg" alt="toggle section">
+                        </span>
+                    </div>
+                </div>
+                <div id="scrollable-side-bar-subjects-mobile" class="filter-categories scrollable-container inactive">
+                    <div class="subject-row-category">
+                        <div class="categories subject-category">
+                            <label for="subject-maths">Maths
+                                <input type="checkbox" name="subject" id="subject-maths" value="Maths">
+                                <span class="custom-checkbox"></span>
+                            </label>
+                        </div>
+                        <div class="categories subject-category">
+                            <label for="subject-english">English
+                                <input type="checkbox" name="subject" id="subject-english" value="English">
+                                <span class="custom-checkbox"></span>
+                            </label>
+                        </div>
+                        <div class="categories subject-category">
+                            <label for="subject-french">French
+                                <input type="checkbox" name="subject" id="subject-french" value="French">
+                                <span class="custom-checkbox"></span>
+                            </label>
+                        </div>
+                        <div class="categories subject-category">
+                            <label for="subject-history">History
+                                <input type="checkbox" name="subject" id="subject-history" value="History">
+                                <span class="custom-checkbox"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="filter-categories">
+                <div id="examCenterListnerMobile" class="filter-category-wrapper">
+                    <div class="filter-category-header">
+                        <span class="filter-heading-category">Exam Center</span>
+                        <span>
+                            <img id="rotating-icon-exam-center" src="img/arrow_drop_up_24dp_222222_FILL0_wght400_GRAD0_opsz24.svg" alt="toggle section">
+                        </span>
+                    </div>
+                </div>
+                <div id="scrollable-side-bar-exam-center-mobile" class="filter-categories scrollable-container inactive">
+                    <div class="subject-row-category">
+                        <div class="categories subject-category">
+                            <label for="center-noida">Noida
+                                <input type="checkbox" name="center" id="center-noida" value="Noida">
+                                <span class="custom-checkbox"></span>
+                            </label>
+                        </div>
+                        <div class="categories subject-category">
+                            <label for="center-delhi">Delhi NCR
+                                <input type="checkbox" name="center" id="center-delhi" value="Delhi NCR">
+                                <span class="custom-checkbox"></span>
+                            </label>
+                        </div>
+                        <div class="categories subject-category">
+                            <label for="center-mumbai">Mumbai
+                                <input type="checkbox" name="center" id="center-mumbai" value="Mumbai">
+                                <span class="custom-checkbox"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div style="text-align: center; padding: 20px;">
+            <button id="apply-filter-button" class="button-register" type="button" style="margin-right: 10px; min-width: 60px;">Apply</button>
+            <button id="clear-filter-button" class="button-register" type="button" style="min-width: 60px;">Clear</button>
+        </div>
+
+    </div>
 
 
     <script src="script.js"></script>

@@ -512,4 +512,75 @@ document.addEventListener("DOMContentLoaded", function () {
         rerenderTable();
     
     });
+
+    // --- Element Selections ---
+    const openFilterButton = document.getElementById('open-filter-btn'); // You need to add this button to your HTML
+    const closeFilterButton = document.getElementById('close-filter-btn');
+    const overlayBackdrop = document.getElementById('overlay-backdrop');
+    const mobileFilterOverlay = document.getElementById('mobile-filter-overlay');
+    const accordionHeaders = document.querySelectorAll('.filter-category-wrapper');
+    const applyButton = document.getElementById('apply-filter-button');
+    const clearButton = document.getElementById('clear-filter-button');
+    const allCheckboxes = mobileFilterOverlay.querySelectorAll('input[type="checkbox"]');
+
+    // --- Functions to Open and Close the Overlay ---
+    const openFilter = () => {
+        overlayBackdrop.classList.remove('inactive');
+        mobileFilterOverlay.classList.remove('inactive');
+    };
+
+    const closeFilter = () => {
+        overlayBackdrop.classList.add('inactive');
+        mobileFilterOverlay.classList.add('inactive');
+    };
+
+    // --- Accordion Logic ---
+    accordionHeaders.forEach(header => {
+        header.addEventListener('click', () => {
+            // The content panel is the next element after the header's wrapper
+            const contentPanel = header.nextElementSibling;
+            const icon = header.querySelector('img');
+
+            // Toggle visibility of the content panel
+            contentPanel.classList.toggle('inactive');
+            // Toggle rotation of the icon
+            icon.classList.toggle('rotate');
+        });
+    });
+
+    // --- Button Logic ---
+    const applyFilters = () => {
+        const selectedFilters = {};
+        allCheckboxes.forEach(checkbox => {
+            if (checkbox.checked) {
+                const group = checkbox.name;
+                if (!selectedFilters[group]) {
+                    selectedFilters[group] = [];
+                }
+                selectedFilters[group].push(checkbox.value);
+            }
+        });
+        
+        console.log('Applying Filters:', selectedFilters);
+        // Add your actual filter logic here
+        
+        closeFilter(); // Close the overlay after applying
+    };
+
+    const clearFilters = () => {
+        allCheckboxes.forEach(checkbox => {
+            checkbox.checked = false;
+        });
+        console.log('All filters cleared.');
+        // You might want to re-fetch or re-display your items here
+    };
+
+    // --- Event Listeners ---
+    if (openFilterButton) {
+        openFilterButton.addEventListener('click', openFilter);
+    }
+    closeFilterButton.addEventListener('click', closeFilter);
+    overlayBackdrop.addEventListener('click', closeFilter);
+    applyButton.addEventListener('click', applyFilters);
+    clearButton.addEventListener('click', clearFilters);
 });
